@@ -7,7 +7,7 @@ import ReadBlog from "./components/readBlog";
 import Admin from "./components/admin";
 import CreateAccount from "./components/createAccount";
 import PrivatedRouter from "../privatedRouter";
-import PublicRouter from "../PublicRouter";
+import PublicRouter from "../publicRouter";
 
 const App = () => {
   return (
