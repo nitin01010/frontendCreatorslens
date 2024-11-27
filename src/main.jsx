@@ -5,11 +5,13 @@ import App from './App.jsx'
 import {BrowserRouter} from 'react-router-dom'
 import { ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
+import { Analytics } from "@vercel/analytics/react"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <App />
+      <Analytics />
       <ToastContainer />
     </BrowserRouter>
   </StrictMode>,
