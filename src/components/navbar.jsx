@@ -10,7 +10,7 @@ const Navbar = () => {
   const fetchData = async (category) => {
     try {
       const response = await axios.get(
-        `https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts`,
+        `https://api.creatorslens.in/api/v1/blogs/getAllPosts`,
         {
           params: {
             categories: category, // Add the category as a query parameter

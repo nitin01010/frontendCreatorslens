@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts");
+        const response = await axios.get("https://api.creatorslens.in/api/v1/blogs/getAllPosts");
         setPost(response?.data?.posts);
       } catch (error) {
         console.error("Error fetching data:", error);

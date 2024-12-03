@@ -9,7 +9,7 @@ const Footer = () => {
   useEffect(() => {
     const fetchRandomPost = async () => {
       try {
-        const response = await axios.get("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts");
+        const response = await axios.get("https://api.creatorslens.in/api/v1/blogs/getAllPosts");
         setRandomPost(response.data.posts);
       } catch (error) {
         console.error("Error fetching random post", error);

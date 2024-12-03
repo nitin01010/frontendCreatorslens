@@ -19,7 +19,7 @@ const Swipper = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts");
+        const response = await axios.get("https://api.creatorslens.in/api/v1/blogs/getAllPosts");
         setPosts(response.data.posts); // Assuming posts contain images
       } catch (error) {
         console.error("Error fetching posts", error);

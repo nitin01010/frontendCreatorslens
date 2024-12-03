@@ -39,13 +39,13 @@ const Admin = () => {
       const postData = { imageUrl, title, content, tag, category, author };
 
       if (currentPost) {
-        await axios.post("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/updatePost", {
+        await axios.post("https://api.creatorslens.in/api/v1/blogs/updatePost", {
           ...postData,
           id: currentPost._id,
         });
         toast.success("Post updated successfully!");
       } else {
-        await axios.post("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/createPost", postData);
+        await axios.post("https://api.creatorslens.in/api/v1/blogs/createPost", postData);
         toast.success("Post created successfully!");
       }
       navigate("/account/admin");
@@ -60,7 +60,7 @@ const Admin = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts");
+      const response = await axios.get("https://api.creatorslens.in/api/v1/blogs/getAllPosts");
       setPosts(response.data.posts);
     } catch (error) {
       console.error("Error fetching posts:", error);
@@ -79,7 +79,7 @@ const Admin = () => {
         toast.error("Authentication token is missing.");
         return;
       }
-      const response = await axios.post("https://creatorslensbackendblogs-production.up.railway.app/api/v1/user/account", { token });
+      const response = await axios.post("https://api.creatorslens.in/api/v1/user/account", { token });
       setProfile(response.data.user);
     } catch (error) {
       console.error("Profile fetch error:", error.response ? error.response.data : error.message);
@@ -110,7 +110,7 @@ const Admin = () => {
   const handleDelete = async (postId) => {
     try {
       const author = Cookies.get("user");
-      await axios.post(`https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/deletePost`,{
+      await axios.post(`https://api.creatorslens.in/api/v1/blogs/deletePost`,{
         id:postId,
         author
       });

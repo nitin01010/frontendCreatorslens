@@ -11,7 +11,7 @@ const SideBar = () => {
     const fetchRandomPost = async () => {
       try {
         const response = await axios.get(
-          "https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getAllPosts"
+          "https://api.creatorslens.in/api/v1/blogs/getAllPosts"
         );
         setRandomPost(response.data.posts || []); // Ensure it's an empty array if no posts
       } catch (error) {

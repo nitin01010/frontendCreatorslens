@@ -15,7 +15,7 @@ const ReadBlog = () => {
     // Make the API call to fetch the post by id
     const fetchPost = async () => {
       try {
-        const response = await axios.post("https://creatorslensbackendblogs-production.up.railway.app/api/v1/blogs/getPostById", { id });
+        const response = await axios.post("https://api.creatorslens.in/api/v1/blogs/getPostById", { id });
         setPost(response.data); // Store post data in state
         setLoading(false); // Set loading to false once data is fetched
       } catch (error) {

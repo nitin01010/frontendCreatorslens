@@ -30,8 +30,8 @@ const CreateAccount = () => {
 
     try {
       const url = isSignup
-        ? "https://creatorslensbackendblogs-production.up.railway.app/api/v1/user/register"
-        : "https://creatorslensbackendblogs-production.up.railway.app/api/v1/user/login";
+        ? "https://api.creatorslens.in/api/v1/user/register"
+        : "https://api.creatorslens.in/api/v1/user/login";
 
       const payload = isSignup
         ? {
